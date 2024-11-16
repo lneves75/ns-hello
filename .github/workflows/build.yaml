@@ -10,6 +10,12 @@ env:
   APP: ns-hello
 
 jobs:
+  build-image:
+    uses: lneves75/gh-workflows/blob/master/.github/workflows/ci.yaml@master
+    with:
+      app-name: ns-hello
+    secrets: inherit
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -38,8 +44,8 @@ jobs:
           node-version-file: '.node-version'
           cache: 'npm'
 
-      - name: Run Tests
-        run: npm run test
+      - run: npm install --ignore-scripts
+      - run: npm run test
 
   lint:
     needs: build

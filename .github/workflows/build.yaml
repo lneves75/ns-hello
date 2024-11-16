@@ -11,7 +11,7 @@ env:
 
 jobs:
   build-image:
-    uses: lneves75/gh-workflows/blob/master/.github/workflows/ci.yaml@master
+    uses: lneves75/gh-workflows/.github/workflows/ci.yaml@master
     with:
       app-name: ns-hello
     secrets: inherit

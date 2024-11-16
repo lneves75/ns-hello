@@ -1,0 +1,14 @@
+**/node_modules
+**/npm-debug*
+**/dist
+**/test
+**/Dockerfile
+**/docker-compose.yml
+**/Makefile
+**/README.md
+**/.dockerignore
+**/.git
+**/.github
+**/.gitignore
+**/package-lock.json
+**/yarn.lock
